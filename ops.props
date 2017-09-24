@@ -525,7 +525,7 @@
         <!-- <TemplateTokenGenerators>UNDEFINED</TemplateTokenGenerators> -->
     </PropertyGroup>
     <PropertyGroup>
-        <LinuxImage Condition=" '$(LinuxImage)' == '' ">resource.container.host.linux</LinuxImage>
+        <LinuxImage Condition=" '$(LinuxImage)' == '' ">resource.router</LinuxImage>
     </PropertyGroup>
 
     <!--

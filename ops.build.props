@@ -809,19 +809,6 @@
             </PostSteps>
         </BuildStepsToExecute>
         -->
-        <BuildStepsToExecute Include="$(BuildStepsPrepareRestoreBerkshelf)">
-            <Properties>
-            </Properties>
-            <Groups>
-                prepare;
-                prepare.restore;
-                prepare.restore.cookbooks;
-            </Groups>
-            <PreSteps>
-            </PreSteps>
-            <PostSteps>
-            </PostSteps>
-        </BuildStepsToExecute>
 
         <BuildStepsToExecute Include="$(BuildStepsPrepareCopyNuGet)">
             <Properties>
@@ -926,6 +913,20 @@
                 prepare;
                 prepare.generate;
                 prepare.generate.files;
+            </Groups>
+            <PreSteps>
+            </PreSteps>
+            <PostSteps>
+            </PostSteps>
+        </BuildStepsToExecute>
+
+        <BuildStepsToExecute Include="$(BuildStepsPrepareRestoreBerkshelf)">
+            <Properties>
+            </Properties>
+            <Groups>
+                prepare;
+                prepare.restore;
+                prepare.restore.cookbooks;
             </Groups>
             <PreSteps>
             </PreSteps>
