@@ -53,8 +53,8 @@ file '/etc/quagga/daemon' do
     # that can be changed via /etc/quagga/debian.conf.
     #
     zebra=yes
-    bgpd=yes
-    ospfd=no
+    bgpd=no
+    ospfd=yes
     ospf6d=no
     ripd=no
     ripngd=no
@@ -203,5 +203,13 @@ file '/proc/sys/net/ipv4/ip_forward' do
   action :create
   content <<~CONF
     1
+  CONF
+end
+
+# Make sure we keep the forwarding after a reboot
+file '/etc/sysctl.conf' do
+  action :create
+  content <<~CONF
+    net.ipv4.ip_forward = 1
   CONF
 end
